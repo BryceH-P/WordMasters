@@ -1,0 +1,72 @@
+*/{
+    box-sizing: border-box;
+}
+.text-edit{
+    font-family: sans-serif;
+    text-decoration: underline;    
+}
+@keyframes winner{
+    100%,
+    0% {
+        color: red;
+    }
+    25% {
+    color: yellow;
+    }
+    50% {
+    color: green;
+    }
+    75% {
+        color:blue;
+    }
+    100% {
+        color: indigo;
+    }
+}
+.winner-text{
+    animation: winner 1s infinite linear;
+}
+.page-layout{
+    display: flex;
+    align-items: center;
+    flex-direction: column  ;
+}
+.game{
+    width: 300px;
+    height: 350px;
+}
+.word-row{
+    display: flex;
+    justify-content: space-around;
+}
+.div-styler{
+    width:30px;
+    height: 30px;
+    margin: 10px;
+    border: 2px solid grey;
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+@keyframes spin{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.loading{
+    width: 50px;
+    height: 50px;
+    display: block;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes div-flash{
+    25%{
+        border-color: red;
+    }
+    100%{
+        border-color: grey;
+    }
+}
+.invalid-input{
+    animation: div-flash 0.5s linear;
+}
